@@ -14,8 +14,8 @@ public class AddressBookMain {
             AddressBookMain addContact=new AddressBookMain();
 
             while (i == 0) {
-                System.out.println("Do you want add new Contact/Edit existing contact: ");
-                System.out.println("1.Add details.\n2.Edit details.");
+                System.out.println("Do you would like to continue?: ");
+                System.out.println("1.Add details.\n2.Edit details.\n3.Delete the details");
                 int choose = sc.nextInt();
                 switch (choose) {
                     case 1:
@@ -23,6 +23,9 @@ public class AddressBookMain {
                         break;
                     case 2:
                         addContact.editContactDetails();
+                        break;
+                    case 3:
+                        addContact.deleteContactDetails();
                         break;
                     default:
                         i = 1;
@@ -121,5 +124,21 @@ public class AddressBookMain {
                 }
 
             }
+        /**
+         * Purpose : Used deleteDetails method to delete the details of the person
+         */
+        public void deleteContactDetails() {
+
+            System.out.println("Confirm your first name to edit details: ");
+            String name = sc.next();
+
+            for (int i = 0; i < contactDetails.size(); i++) {
+                if (contactDetails.get(i).getFirstname().equals(name)) {
+                    System.out.println("Select form below to change: ");
+                    contactDetails.remove(i);
+                }
+            }
+            System.out.println(contactDetails);
+        }
 
 }
