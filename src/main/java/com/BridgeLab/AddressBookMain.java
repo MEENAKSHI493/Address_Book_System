@@ -61,7 +61,8 @@ public class AddressBookMain {
             details.setZip(sc.nextInt());
             System.out.println("Enter the Phone number of person:");
             details.setPhoneNumber(sc.nextInt());
-            //sc.close();
+
+            //to add multiple contact in the arraylist
             contactDetails.add(details);
             System.out.println("*******************************");
             System.out.println(details.toString());
