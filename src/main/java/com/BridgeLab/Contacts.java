@@ -17,7 +17,7 @@ package com.BridgeLab;
         private int phonenumber;
 
         /**
-         * Getter setter methods to assign/retrieve the contact details
+         * Getter/setter methods to assign/retrieve the contact details
          * @return
          */
         public String getFirstname() {
@@ -76,12 +76,21 @@ package com.BridgeLab;
              this.zip = zip;
         }
 
-        public int getNumber() {
+        public int getPhoneNumber() {
             return this.phonenumber = phonenumber;
         }
 
-        public void getNumber(int phonenumber) {
+        public void setPhoneNumber(int phonenumber) {
              this.phonenumber = phonenumber;
         }
 
+       @Override
+        public String toString(){
+            return "Contact details:"+"\n"+"FirstName="+firstname+"\n"
+                    +"LastName="+lastname+"\n"
+                    +"City="+city+"\n"
+                    +"State="+state+"\n"
+                    +"Zip="+zip+"\n"
+                    +"Address="+address;
+        }
     }
