@@ -9,10 +9,10 @@ public class AddressBookMain {
         ArrayList<Contacts> contactDetails = new ArrayList<>();
         static Scanner sc = new Scanner(System.in);
         static HashMap<String, ArrayList<Contacts>> hashmap = new HashMap<>();
+        static AddressBookMain addContact=new AddressBookMain();
 
         public static void main(String[] args) {
-            AddressBookMain addContact=new AddressBookMain();
-            addContact.createAddressBook();
+               addContact.createAddressBook();
         }
 
         /***
@@ -147,7 +147,7 @@ public class AddressBookMain {
                         }
 
                         ArrayList<Contacts> new_address_book = new ArrayList<>();
-                        Book = new_address_book;
+                        contactDetails = new_address_book;
                         while (true) {
                             int choose1;
                             System.out.println("Choose what you want to do: ");
@@ -159,19 +159,19 @@ public class AddressBookMain {
                             }
                             switch (choose1) {
                                 case 1:
-                                    Details.AddDetails();
+                                    addContact.addContactDetails();
                                     break;
                                 case 2:
-                                    Details.editDetails();
+                                    addContact.editContactDetails();
                                     break;
                                 case 3:
-                                    Details.deleteDetails();
+                                    addContact.deleteContactDetails();
                                     break;
                                 default:
                                     System.out.println("Choose valid option");
                                     break;
                             }
-                            hashmap.put(address_name, Book);
+                            hashmap.put(address_name, contactDetails);
                             System.out.println(hashmap);
                         }
                         break;
@@ -184,8 +184,8 @@ public class AddressBookMain {
                         if (hashmap.containsKey(address_name_old)) {
 
                             ArrayList<Contacts> old_address_book = new ArrayList<>();
-                            Book = old_address_book;
-                            Book = hashmap.get(address_name_old);
+                            contactDetails = old_address_book;
+                            contactDetails = hashmap.get(address_name_old);
                             while (true) {
                                 System.out.println("Choose what you want to do: ");
                                 System.out.println("1.Add details.\n2.Edit details.\n3.Delete contact.\n4.Exit");
@@ -196,19 +196,20 @@ public class AddressBookMain {
                                 }
                                 switch (choose2) {
                                     case 1:
-                                        Details.AddDetails();
+                                        addContact.addContactDetails();
                                         break;
                                     case 2:
-                                        Details.editDetails();
+                                        addContact.editContactDetails();
                                         break;
                                     case 3:
-                                        Details.deleteDetails();
+                                        addContact.deleteContactDetails();
+                                        addContact.deleteContactDetails();
                                         break;
                                     default:
                                         System.out.println("Choose valid option");
                                         break;
                                 }
-                                hashmap.put(address_name_old, Book);
+                                hashmap.put(address_name_old, contactDetails);
                                 System.out.println(hashmap);
                             }
                         } else {
@@ -226,6 +227,5 @@ public class AddressBookMain {
                 }
             }
         }
-
 
 }

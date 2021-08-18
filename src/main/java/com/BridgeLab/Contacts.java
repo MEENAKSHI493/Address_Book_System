@@ -21,22 +21,27 @@ package com.BridgeLab;
          * @return
          */
         public String getFirstname() {
-                return this.firstname = firstname;
+
+            return this.firstname = firstname;
             }
 
         public void setFirstname(String firstname) {
+
             this.firstname=firstname;
         }
 
         public String getLastname() {
+
             return this.lastname = lastname;
         }
 
         public void setLastname(String lastname) {
+
             this.lastname=lastname;
         }
 
-        public String getAddress() {
+        public String getAddress()
+        {
             return this.address = address;
         }
 
@@ -45,6 +50,7 @@ package com.BridgeLab;
         }
 
         public String getCity() {
+
             return this.city = city;
         }
 
@@ -53,22 +59,27 @@ package com.BridgeLab;
         }
 
         public String getState() {
-              return this.state = state;
+
+            return this.state = state;
             }
 
-        public void setState(String state) {
+        public void setState(String state)
+        {
              this.state = state;
         }
 
         public String getEmail() {
+
             return this.email = email;
         }
 
         public void setEmail(String email) {
-             this.email = email;
+
+            this.email = email;
         }
 
         public int getZip() {
+
             return this.zip = zip;
         }
 
@@ -77,11 +88,13 @@ package com.BridgeLab;
         }
 
         public int getPhoneNumber() {
+
             return this.phonenumber = phonenumber;
         }
 
         public void setPhoneNumber(int phonenumber) {
-             this.phonenumber = phonenumber;
+
+            this.phonenumber = phonenumber;
         }
 
        @Override
